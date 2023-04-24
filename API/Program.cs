@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
-// Video 8
+// Video 27
 // Add services to the container.
 
 builder.Services.AddControllers();
