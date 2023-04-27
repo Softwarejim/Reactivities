@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
-// Video 41
+// Video 51
 // https://github.com/TryCatchLearn/reactivities
 
 builder.Services.AddControllers();
