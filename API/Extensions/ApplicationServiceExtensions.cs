@@ -21,7 +21,8 @@ namespace API.Extensions
             {
                 opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
-
+            
+            // Allow Http
             services.AddCors(opt =>
             {
                 opt.AddPolicy("CorsPolicy", policy =>

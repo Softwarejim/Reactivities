@@ -5,12 +5,9 @@ using Persistence;
 var builder = WebApplication.CreateBuilder(args);
 // Video 41
 // https://github.com/TryCatchLearn/reactivities
-// Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddApplicationServices(builder.Configuration);
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-
 
 var app = builder.Build();
 
@@ -28,7 +25,6 @@ app.MapControllers();
 
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
-
 
 try
 {

@@ -101,7 +101,6 @@ namespace Persistence
                     Venue = "Cinema",
                 }
             };
-
             await context.Activities.AddRangeAsync(activities);
             await context.SaveChangesAsync();
         }
