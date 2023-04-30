@@ -7,7 +7,7 @@ internal class Program
     private static async Task Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
-        // Video 53
+        // Video 68
         // https://github.com/TryCatchLearn/reactivities
 
         builder.Services.AddControllers();
