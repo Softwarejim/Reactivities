@@ -8,9 +8,7 @@ function App() {
   const location = useLocation();
   return (
     <>
-      {location.pathname === "/" ? (
-        <HomePage />
-      ) : (
+      {location.pathname === "/" ? (<HomePage />) : (
         <>
           <NavBar />
           <Container style={{ marginTop: "7em" }}>
