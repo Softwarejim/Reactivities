@@ -7,22 +7,25 @@ import { useEffect } from 'react';
 import LoadingComponent from '../../app/layout/LoadingComponent';
 
 export default function ProfilePage() {
-	const {username} = useParams<{username: string}>();
-	const {profileStore} = useStore();
-	const {loadingProfile, loadProfile, profile} = profileStore;
+	const { username } = useParams<{ username: string }>();
+	const { profileStore } = useStore();
+	const { loadingProfile, loadProfile, profile } = profileStore;
 
 	useEffect(() => {
 		if (username) loadProfile(username);
-	}, [loadProfile, username])
+	}, [loadProfile, username]);
 
-	if (loadingProfile) return <LoadingComponent  content='Loading profile...'/>
+	if (loadingProfile) return <LoadingComponent content='Loading profile...' />;
 
 	return (
 		<Grid>
 			<Grid.Column width={16}>
-				{profile && 
-				<ProfileHeader profile={profile} />}
-				<ProfileContent  />
+				{profile && (
+					<>
+						<ProfileHeader profile={profile} />
+						<ProfileContent profile={profile} />
+					</>
+				)}
 			</Grid.Column>
 		</Grid>
 	);
